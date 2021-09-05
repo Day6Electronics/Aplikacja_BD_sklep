@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-01 17:54:00
+/* Smarty version 3.1.39, created on 2021-09-05 13:23:46
   from 'C:\Serwery i inne szmery\xamp\htdocs\ElectroWorld\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_612fa218d1c7d1_54440415',
+  'unifunc' => 'content_6134a8c2a7c5e3_91208719',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be3f4038680284b7371fa7128ec96a9d50a90133' => 
     array (
       0 => 'C:\\Serwery i inne szmery\\xamp\\htdocs\\ElectroWorld\\app\\views\\templates\\main.tpl',
-      1 => 1630511635,
+      1 => 1630841023,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_612fa218d1c7d1_54440415 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6134a8c2a7c5e3_91208719 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -57,7 +57,7 @@ shopShow" class="logo"><strong>ElectroWorld</strong></a>
                             <div class="col-4 col-12-small">
                                 <section id="search" class="alt">
                                     <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-search">
+search/1">
                                         <input type="text" name="sf_query" id="search-form" placeholder="Wpisz czego poszukujesz..."/>
                                     </form>
                                         <style>
@@ -91,12 +91,12 @@ loginShow" class="button">Logowanie</a>
                     </header>
 
                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2043572145612fa218d07eb5_60232832', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14954710536134a8c2a64c34_39409203', 'content');
 ?>
 
                 
                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_724606889612fa218d085c5_59722925', 'messages');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6612588916134a8c2a65392_62988399', 'messages');
 ?>
 
 
@@ -341,12 +341,12 @@ loginShow" class="pure-menu-heading pure-menu-link">Logowanie</a>
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_2043572145612fa218d07eb5_60232832 extends Smarty_Internal_Block
+class Block_14954710536134a8c2a64c34_39409203 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_2043572145612fa218d07eb5_60232832',
+    0 => 'Block_14954710536134a8c2a64c34_39409203',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -354,12 +354,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'messages'} */
-class Block_724606889612fa218d085c5_59722925 extends Smarty_Internal_Block
+class Block_6612588916134a8c2a65392_62988399 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'messages' => 
   array (
-    0 => 'Block_724606889612fa218d085c5_59722925',
+    0 => 'Block_6612588916134a8c2a65392_62988399',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

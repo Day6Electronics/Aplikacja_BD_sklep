@@ -12,7 +12,8 @@ class ShopCtrl {
 
     private $ps_form;                                                           //formularz wyszukiwania
     private $records;
-    private $q_form;                                                            //formularz ilości produktów
+    private $q_form;
+    private $page;
 
     public function __construct() {
         $this->ps_form = new ProductSearchForm();
@@ -21,12 +22,15 @@ class ShopCtrl {
 
     public function validate() {
         $this->ps_form->query = ParamUtils::getFromRequest('sf_query');
-
         return !App::getMessages()->isError();
     }
 
     public function load_data() {
-       $this->validate();
+        $this->validate();
+        
+        $this->page = ParamUtils::getFromCleanURL(1, true, 'Błędne wywołanie aplikacji');
+        $limit = 5;
+        $from = ($this->page - 1) * $limit;
 
         $search_params = [];
         if (isset($this->ps_form->query) && strlen($this->ps_form->query) > 0) {
@@ -41,6 +45,7 @@ class ShopCtrl {
         }
         
         $where ["ORDER"] = "name";
+        $where ["LIMIT"] = [$from, $limit];
 
         try {
             $this->records = App::getDB()->select("product", [
@@ -115,11 +120,13 @@ class ShopCtrl {
         $this->load_data();
         $this->checkLog();
         global $log;
+        global $page;
         App::getSmarty()->assign('log', $this->log);
         App::getSmarty()->assign('q_form', $this->q_form);
         App::getSmarty()->assign('query', $this->ps_form->query);
         App::getSmarty()->assign('searchForm', $this->ps_form);
         App::getSmarty()->assign('products', $this->records);
+        App::getSmarty()->assign('page', $this->page);
         App::getSmarty()->display('productListView.tpl');
     }
     

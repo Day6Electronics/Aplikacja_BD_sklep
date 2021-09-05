@@ -28,7 +28,7 @@
                             </div>
                             <div class="col-4 col-12-small">
                                 <section id="search" class="alt">
-                                    <form method="post" action="{$conf->action_root}search">
+                                    <form method="post" action="{$conf->action_root}search/1">
                                         <input type="text" name="sf_query" id="search-form" placeholder="Wpisz czego poszukujesz..."/>
                                     </form>
                                         <style>
