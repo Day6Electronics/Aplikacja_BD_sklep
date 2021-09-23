@@ -9,24 +9,24 @@
                 <style>
                     #electro {
                         display: inline;
-                        color: tomato;
+                        color: #f56a6a;
                         text-shadow: 25px 15px 5px gray;
                         line-height: 2;
                     }
                     #world {
                         display: inline;
                         color: gray;
-                        text-shadow: 25px 15px 5px tomato;
+                        text-shadow: 25px 15px 5px #f56a6a;
                         line-height: 2;
                     }
                 </style>
             </header>
-            <p>ElectroWorld to sklep dla elektronika (zarówno hobbysty jak i profesjonalisty), w którym znajdziesz niezbędne urządzenia, akcesoria i części pozwalające realizować swoje najbardziej wyszukane projekty.</p>
+            <p>ElectroWorld to sklep dla elektroników (zarówno hobbystów jak i profesjonalistów), w którym każdy znajdzie niezbędne narzędzia, akcesoria i części pozwalające realizować nawet najbardziej wyszukane projekty.</p>
         </div>
         <span class="image object">
             <style>
                     #pic {
-                        box-shadow: 0px 0px 25px gray;
+                        box-shadow: 0px 0px 35px gray;
                     }
             </style>
             <img src="{$conf->app_url}/images/main.jpg" alt="" id="pic"/>
@@ -44,7 +44,7 @@
                 <h3>Arduino</h3>
                 <p>Popularne moduły Arduino oparte na mikrokontrolerach z rodziny AVR.</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/arduino" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/arduino" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -52,7 +52,7 @@
                 <h3>Mikrokontrolery</h3>
                 <p>Mikrokontrolery z rodziny AVR idealnie nadające się do mniej i bardziej zaawansowanych projektów.</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/uc-avr" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/uc-avr" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -60,7 +60,7 @@
                 <h3>Czujniki</h3>
                 <p>Czujniki temperatury, wilgotności, ciśnienia, krańcowe...</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/czujniki" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/czujniki" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -68,7 +68,7 @@
                 <h3>Serwomechanizmy</h3>
                 <p>Szczególnie popularne w szeroko rozumianej automatyce, robotyce i modelarstwie - głównie w pojazdach zdalnie sterowanych.</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/serwa" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/serwa" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -76,7 +76,7 @@
                 <h3>Silniki elektryczne</h3>
                 <p>Silniki z przekładnią, bez przekładni, krokowe...</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/silniki" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/silniki" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -84,7 +84,7 @@
                 <h3>Elementy pasywne</h3>
                 <p>Rezystory, kondensatory, dławiki, rezonatory, potencjometry, magnesy...</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/elem-pas" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/elem-pas" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -92,7 +92,7 @@
                 <h3>Diody</h3>
                 <p>Diody LED, diody prostownicze, diody Zenera, diody Schottky...</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/diody" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/diody" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -100,7 +100,7 @@
                 <h3>Wyświetlacze i ekrany</h3>
                 <p>Wyświetlacze LCD, TFT, IPS, OLED, e-paper, a także wyświetlacze segmentowe i matryce LED RGB.</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/wyswietlacze" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/wyswietlacze" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -108,7 +108,7 @@
                 <h3>Druk 3D</h3>
                 <p>Drukarki 3D, filamenty i akcesoria do druku 3D.</p>
                 <ul class="actions">
-                    <li><a href="{$conf->action_root}productList/druk3d" class="button">Sprawdź</a></li>
+                    <li><a href="{$conf->action_root}search/druk3d" class="button">Sprawdź</a></li>
                 </ul>
             </article>
         </div>

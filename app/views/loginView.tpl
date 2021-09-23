@@ -27,9 +27,8 @@
                 </div>
                 <div class="col-4 col-12-small">
                     <ul class="actions">
-                        <li><input value="Zaloguj" class="button primary" type="submit"></li>
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;lub</p>
-                        <li><a href="{$conf->action_root}registerShow" class="button">Zarejestruj się</a></li>
+                        <li><button class="button primary icon solid fa-sign-in-alt" type="submit">Zaloguj</button></li>
+                        <li><a href="{$conf->action_root}registerShow" class="button icon solid fa-user-plus">Nowe konto</a></li>
                     </ul>
                 </div>
             </div>

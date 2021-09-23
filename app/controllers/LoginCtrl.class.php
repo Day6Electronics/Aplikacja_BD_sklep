@@ -13,6 +13,7 @@ class LoginCtrl {
 
     private $l_form; //formularz logowania
     private $users;
+    private $login;
 
     public function __construct() {
         //stworzenie potrzebnych obiektów
@@ -47,6 +48,7 @@ class LoginCtrl {
         
         try {
             $this->users = App::getDB()->select("user", [
+                "login",
                 "pass",
                 "role",
                     ], $where);
@@ -67,7 +69,7 @@ class LoginCtrl {
             if ($this->l_form->pass == $u["pass"]) {
             RoleUtils::addRole($u["role"]);
             SessionUtils::store($log, $this->l_form->login);
-            #$_SESSION[ 'log' ] = $this->l_form->login;
+            setcookie("log", $this->l_form->login, time() + (3600), "/");
             break;
         }else{
             Utils::addErrorMessage('Niepoprawny login lub hasło');
@@ -95,6 +97,7 @@ class LoginCtrl {
 
     public function action_logout() {
         // 1. zakończenie sesji
+        setcookie("log", "", time() - 3600);
         session_destroy();
         // 2. idź na stronę główną - system automatycznie przekieruje do strony logowania
         App::getRouter()->redirectTo('shopShow');

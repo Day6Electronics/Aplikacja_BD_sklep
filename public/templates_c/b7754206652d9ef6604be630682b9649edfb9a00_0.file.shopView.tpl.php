@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-08-21 11:03:30
+/* Smarty version 3.1.39, created on 2021-09-21 22:54:17
   from 'C:\Serwery i inne szmery\xamp\htdocs\ElectroWorld\app\views\shopView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6120c162d65aa2_52998802',
+  'unifunc' => 'content_614a4679009f37_44641717',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b7754206652d9ef6604be630682b9649edfb9a00' => 
     array (
       0 => 'C:\\Serwery i inne szmery\\xamp\\htdocs\\ElectroWorld\\app\\views\\shopView.tpl',
-      1 => 1629536603,
+      1 => 1632257654,
       2 => 'file',
     ),
   ),
@@ -20,23 +20,23 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6120c162d65aa2_52998802 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614a4679009f37_44641717 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13394585966120c162d5e0a1_85708655', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_285352802614a4679002724_65009569', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_13394585966120c162d5e0a1_85708655 extends Smarty_Internal_Block
+class Block_285352802614a4679002724_65009569 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_13394585966120c162d5e0a1_85708655',
+    0 => 'Block_285352802614a4679002724_65009569',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -50,24 +50,24 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <style>
                     #electro {
                         display: inline;
-                        color: tomato;
+                        color: #f56a6a;
                         text-shadow: 25px 15px 5px gray;
                         line-height: 2;
                     }
                     #world {
                         display: inline;
                         color: gray;
-                        text-shadow: 25px 15px 5px tomato;
+                        text-shadow: 25px 15px 5px #f56a6a;
                         line-height: 2;
                     }
                 </style>
             </header>
-            <p>ElectroWorld to sklep dla elektronika (zarówno hobbysty jak i profesjonalisty), w którym znajdziesz niezbędne urządzenia, akcesoria i części pozwalające realizować swoje najbardziej wyszukane projekty.</p>
+            <p>ElectroWorld to sklep dla elektroników (zarówno hobbystów jak i profesjonalistów), w którym każdy znajdzie niezbędne narzędzia, akcesoria i części pozwalające realizować nawet najbardziej wyszukane projekty.</p>
         </div>
         <span class="image object">
             <style>
                     #pic {
-                        box-shadow: 0px 0px 25px gray;
+                        box-shadow: 0px 0px 35px gray;
                     }
             </style>
             <img src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
@@ -88,7 +88,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                 <p>Popularne moduły Arduino oparte na mikrokontrolerach z rodziny AVR.</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/arduino" class="button">Sprawdź</a></li>
+search/arduino" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -98,7 +98,7 @@ productList/arduino" class="button">Sprawdź</a></li>
                 <p>Mikrokontrolery z rodziny AVR idealnie nadające się do mniej i bardziej zaawansowanych projektów.</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/uc-avr" class="button">Sprawdź</a></li>
+search/uc-avr" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -108,7 +108,7 @@ productList/uc-avr" class="button">Sprawdź</a></li>
                 <p>Czujniki temperatury, wilgotności, ciśnienia, krańcowe...</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/czujniki" class="button">Sprawdź</a></li>
+search/czujniki" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -118,7 +118,7 @@ productList/czujniki" class="button">Sprawdź</a></li>
                 <p>Szczególnie popularne w szeroko rozumianej automatyce, robotyce i modelarstwie - głównie w pojazdach zdalnie sterowanych.</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/serwa" class="button">Sprawdź</a></li>
+search/serwa" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -128,7 +128,7 @@ productList/serwa" class="button">Sprawdź</a></li>
                 <p>Silniki z przekładnią, bez przekładni, krokowe...</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/silniki" class="button">Sprawdź</a></li>
+search/silniki" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -138,7 +138,7 @@ productList/silniki" class="button">Sprawdź</a></li>
                 <p>Rezystory, kondensatory, dławiki, rezonatory, potencjometry, magnesy...</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/elem-pas" class="button">Sprawdź</a></li>
+search/elem-pas" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -148,7 +148,7 @@ productList/elem-pas" class="button">Sprawdź</a></li>
                 <p>Diody LED, diody prostownicze, diody Zenera, diody Schottky...</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/diody" class="button">Sprawdź</a></li>
+search/diody" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -158,7 +158,7 @@ productList/diody" class="button">Sprawdź</a></li>
                 <p>Wyświetlacze LCD, TFT, IPS, OLED, e-paper, a także wyświetlacze segmentowe i matryce LED RGB.</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/wyswietlacze" class="button">Sprawdź</a></li>
+search/wyswietlacze" class="button">Sprawdź</a></li>
                 </ul>
             </article>
             <article>
@@ -168,7 +168,7 @@ productList/wyswietlacze" class="button">Sprawdź</a></li>
                 <p>Drukarki 3D, filamenty i akcesoria do druku 3D.</p>
                 <ul class="actions">
                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/druk3d" class="button">Sprawdź</a></li>
+search/druk3d" class="button">Sprawdź</a></li>
                 </ul>
             </article>
         </div>

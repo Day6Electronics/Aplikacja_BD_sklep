@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-09-05 13:23:46
+/* Smarty version 3.1.39, created on 2021-09-22 19:46:51
   from 'C:\Serwery i inne szmery\xamp\htdocs\ElectroWorld\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_6134a8c2a7c5e3_91208719',
+  'unifunc' => 'content_614b6c0b2ae9f6_63647728',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be3f4038680284b7371fa7128ec96a9d50a90133' => 
     array (
       0 => 'C:\\Serwery i inne szmery\\xamp\\htdocs\\ElectroWorld\\app\\views\\templates\\main.tpl',
-      1 => 1630841023,
+      1 => 1632332808,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6134a8c2a7c5e3_91208719 (Smarty_Internal_Template $_smarty_tpl) {
+function content_614b6c0b2ae9f6_63647728 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -37,6 +37,10 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /assets/css/main.css" />
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
+/assets/css/fontawesome.css" />
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
+/assets/css/solid.css" />
     </head>
     <body class="is-preload">
 
@@ -56,22 +60,24 @@ shopShow" class="logo"><strong>ElectroWorld</strong></a>
                             </div>
                             <div class="col-4 col-12-small">
                                 <section id="search" class="alt">
-                                    <form method="post" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-search/1">
-                                        <input type="text" name="sf_query" id="search-form" placeholder="Wpisz czego poszukujesz..."/>
+                                    <form method="post" id="search-form" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+search">
+                                        <input type="text" name="sf_query" placeholder="Wpisz czego poszukujesz..." value="<?php echo (($tmp = @$_smarty_tpl->tpl_vars['searchForm']->value->query)===null||$tmp==='' ? '' : $tmp);?>
+"/>
                                     </form>
-                                        <style>
-                                            #search-form{
-                                                border: 2px solid tomato;}
-                                        </style>
+                                    <style>
+                                        #search-form{
+                                            border: 2px solid #f56a6a;
+                                            border-radius: 8px;
+                                        }
+                                    </style>
                                 </section>
                             </div>
-                            <div class="col-4 col-12-small" align="left">
+                            <div class="col-4 col-12-small" align="center">
                                 <?php if (count($_smarty_tpl->tpl_vars['conf']->value->roles) > 0) {?>
-                                    <p>Zalogowano jako:<br><em style="color:Tomato;"><?php echo \core\SessionUtils::load($_smarty_tpl->tpl_vars['log']->value,true);?>
+                                    <p>Użytkownik:<br><em style="color:#f56a6a;"><?php echo (($tmp = @\core\SessionUtils::load($_smarty_tpl->tpl_vars['log']->value,true))===null||$tmp==='' ? '' : $tmp);?>
 </em></p>
-                                <?php } else { ?>	
-                                    
+                                <?php } else { ?>
                                 <?php }?>
                             </div>
                             <div class="col-2 col-12-small" align="right">
@@ -79,10 +85,10 @@ search/1">
                                     <li>
                                         <?php if (count($_smarty_tpl->tpl_vars['conf']->value->roles) > 0) {?>
                                             <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-logout" class="button primary">Wyloguj</a>
+logout" class="button primary icon solid fa-sign-out-alt" onclick="info()">Wyloguj</a>
                                         <?php } else { ?>	
                                             <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-loginShow" class="button">Logowanie</a>
+loginShow" class="button icon solid fa-sign-in-alt">Logowanie</a>
                                         <?php }?>
                                     </li>
                                 </ul>
@@ -91,12 +97,12 @@ loginShow" class="button">Logowanie</a>
                     </header>
 
                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14954710536134a8c2a64c34_39409203', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1933136383614b6c0b2992f6_69842302', 'content');
 ?>
 
                 
                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6612588916134a8c2a65392_62988399', 'messages');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_214162950614b6c0b2999e4_16881819', 'messages');
 ?>
 
 
@@ -114,155 +120,162 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6612588916134a8c2a
                     </header>
                     <ul>
                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-shopShow">Strona główna</a></li>
+shopShow" class="icon solid fa-home"> Strona główna</a></li>
                         <li>
                             <span class="opener">Arduino</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/arduino-moduly-glowne">Arduino - moduły główne</a></li>
+search/arduino-moduly-glowne">Arduino - moduły główne</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/arduino-shield">Arduino Shield - rozszerzenia</a></li>
+search/arduino-shield">Arduino Shield - rozszerzenia</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/arduino-ksiazki">Książki o Arduino</a></li>
+search/arduino-ksiazki">Książki o Arduino</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/arduino-obudowy">Obudowy</a></li>
+search/arduino-obudowy">Obudowy</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/arduino-zasilanie">Zasilanie</a></li>
+search/arduino-zasilanie">Zasilanie</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Mikrokontrolery AVR</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/uc-avr-attiny">ATtiny</a></li>
+search/uc-avr-attiny">ATtiny</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/uc-avr-atmega">ATmega</a></li>
+search/uc-avr-atmega">ATmega</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/uc-avr-ksiazki">Książki o AVR</a></li>
+search/uc-avr-ksiazki">Książki o AVR</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Czujniki</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/czujniki-temperatury">Czujniki temperatury</a></li>
+search/czujniki-temperatury">Czujniki temperatury</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/czujniki-wilgotnosci">Czujniki wilgotności</a></li>
+search/czujniki-wilgotnosci">Czujniki wilgotności</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/czujniki-cisnienia">Czujniki ciśnienia</a></li>
+search/czujniki-cisnienia">Czujniki ciśnienia</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Serwomechanizmy</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/serwa-micro">Serwa typu micro</a></li>
+search/serwa-micro">Serwa typu micro</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/serwa-medium">Serwa typu medium</a></li>
+search/serwa-medium">Serwa typu medium</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/serwa-standard">Serwa typu standard</a></li>
+search/serwa-standard">Serwa typu standard</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/serwa-akcesoria">Akcesoria do serw</a></li>
+search/serwa-akcesoria">Akcesoria do serw</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Silniki elektryczne</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/silniki-bez-przekladni">Silniki bez przekładni</a></li>
+search/silniki-bez-przekladni">Silniki bez przekładni</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/silniki-z-przekladnia">Silniki z przekładnią</a></li>
+search/silniki-z-przekladnia">Silniki z przekładnią</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/silniki-krokowe">Silniki krokowe</a></li>
+search/silniki-krokowe">Silniki krokowe</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/silniki-wibracyjne">Silniki wibracyjne</a></li>
+search/silniki-wibracyjne">Silniki wibracyjne</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/silniki-pompy">Pompy wodne</a></li>
+search/silniki-pompy">Pompy wodne</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Elementy pasywne</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/elem-pas-rezystory">Rezystory</a></li>
+search/elem-pas-rezystory">Rezystory</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/elem-pas-kondensatory">Kondensatory</a></li>
+search/elem-pas-kondensatory">Kondensatory</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/elem-pas-dlawiki">Dławiki</a></li>
+search/elem-pas-dlawiki">Dławiki</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/elem-pas-bezpieczniki">Bezpieczniki</a></li>
+search/elem-pas-bezpieczniki">Bezpieczniki</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/elem-pas-potencjometry">Potencjometry</a></li>
+search/elem-pas-potencjometry">Potencjometry</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/elem-pas-magnesy">Magnesy</a></li>
+search/elem-pas-magnesy">Magnesy</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Diody</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/diody-led">Diody LED</a></li>
+search/diody-led">Diody LED</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/diody-prostownicze">Diody prostownicze</a></li>
+search/diody-prostownicze">Diody prostownicze</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/diody-zenera">Diody Zenera</a></li>
+search/diody-zenera">Diody Zenera</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/diody-schottky">Diody Schottky</a></li>
+search/diody-schottky">Diody Schottky</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/diody-paski-ledowe">Paski ledowe</a></li>
+search/diody-paski-ledowe">Paski ledowe</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Wyświetlacze i ekrany</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/wyswietlacze-lcd">Wyświetlacze LCD</a></li>
+search/wyswietlacze-lcd">Wyświetlacze LCD</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/wyswietlacze-tft">Wyświetlacze TFT</a></li>
+search/wyswietlacze-tft">Wyświetlacze TFT</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/wyswietlacze-ips">Wyświetlacze IPS</a></li>
+search/wyswietlacze-ips">Wyświetlacze IPS</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/wyswietlacze-oled">Wyświetlacze OLED</a></li>
+search/wyswietlacze-oled">Wyświetlacze OLED</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/wyswietlacze-e-paper">Wyświetlacze e-paper</a></li>
+search/wyswietlacze-e-paper">Wyświetlacze e-paper</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/wyswietlacze-segmentowe">Wyświetlacze segmentowe</a></li>
+search/wyswietlacze-segmentowe">Wyświetlacze segmentowe</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/wyswietlacze-matryce-led">Matryce LED</a></li>
+search/wyswietlacze-matryce-led">Matryce LED</a></li>
                             </ul>
                         </li>
                         <li>
                             <span class="opener">Druk 3D</span>
                             <ul>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/druk3d-drukarki">Drukarki 3D</a></li>
+search/druk3d-drukarki">Drukarki 3D</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/druk3d-filamenty">Filamenty</a></li>
+search/druk3d-filamenty">Filamenty</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/druk3d-piora3d">Pióra 3D</a></li>
+search/druk3d-piora3d">Pióra 3D</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/druk3d-akcesoria">Akcesoria</a></li>
+search/druk3d-akcesoria">Akcesoria</a></li>
                                 <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-productList/druk3d-czesci-zamienne">Części zamienne</a></li>
+search/druk3d-czesci-zamienne">Części zamienne</a></li>
                             </ul>
-                        </li>
-                        <li>
-                            <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-cartShow" class="pure-menu-heading pure-menu-link">Koszyk (pusty)</a>
                         </li>
                         <li>
                             <?php if (count($_smarty_tpl->tpl_vars['conf']->value->roles) > 0) {?>
                                 <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-accountShow" class="pure-menu-heading pure-menu-link">Konto (<?php echo \core\SessionUtils::load($_smarty_tpl->tpl_vars['log']->value,true);?>
+cartShow" class="pure-menu-heading pure-menu-link icon solid fa-shopping-cart"> Koszyk (<?php echo number_format($_smarty_tpl->tpl_vars['cartValue']->value,2,',',' ');?>
+ zł)</a>
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+accountShow" class="pure-menu-heading pure-menu-link icon solid fa-user"> Konto (<?php echo (($tmp = @\core\SessionUtils::load($_smarty_tpl->tpl_vars['log']->value,true))===null||$tmp==='' ? '' : $tmp);?>
 )</a>
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+logout" class="pure-menu-heading pure-menu-link icon solid fa-sign-out-alt" onclick="info()"> Wyloguj</a>
                             <?php } else { ?>	
                                 <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
-loginShow" class="pure-menu-heading pure-menu-link">Logowanie</a>
+loginShow" class="pure-menu-heading pure-menu-link icon solid fa-sign-in-alt"> Logowanie</a>
                             <?php }?>
                         </li>
                     </ul>
                 </nav>
-
+                <?php echo '<script'; ?>
+>
+                    function info(){
+                        alert("Poprawnie wylogowano.");
+                    }
+                <?php echo '</script'; ?>
+>
                 <!-- Section -->
                 <section>
                     <header class="major">
@@ -293,12 +306,13 @@ loginShow" class="pure-menu-heading pure-menu-link">Logowanie</a>
                         <h2>Kontakt</h2>
                     </header>
                     <ul class="contact">
-                        <li class="icon solid fa-envelope"><a>info@electroworld.com.pl</a></li>
+                        <li class="icon solid fa-envelope">info@electroworld.com.pl</li>
                         <li class="icon solid fa-phone">+48 85 837 43 23</li>
-                        <li class="icon solid fa-home">ELECTROWORLD<br />
-                            Kwiatowa 25C<br />
+                        <li class="icon solid fa-home">ElectroWorld<br />
+                            Grodziecka 2b<br />
                             41-250 Czeladź<br />
-                            Polska</li>
+                            Polska<br /><br />
+                            <a href="https://www.google.pl/maps/place/Grodziecka+2b,+41-250+Czeladź" target="_blank">Pokaż na mapie</a></li>
                         <li class="icon solid fa-clock">Godziny pracy sklepu stacjonarnego:<br />
                             pon-pt: 8:00 - 16:00<br />
                             sobota: 10:00 - 14:00<br />
@@ -337,16 +351,20 @@ loginShow" class="pure-menu-heading pure-menu-link">Logowanie</a>
  src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
 /assets/js/main.js"><?php echo '</script'; ?>
 >
+    <?php echo '<script'; ?>
+ src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
+/assets/js/functions.js"><?php echo '</script'; ?>
+>
 
 </body>
 </html><?php }
 /* {block 'content'} */
-class Block_14954710536134a8c2a64c34_39409203 extends Smarty_Internal_Block
+class Block_1933136383614b6c0b2992f6_69842302 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_14954710536134a8c2a64c34_39409203',
+    0 => 'Block_1933136383614b6c0b2992f6_69842302',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -354,12 +372,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'messages'} */
-class Block_6612588916134a8c2a65392_62988399 extends Smarty_Internal_Block
+class Block_214162950614b6c0b2999e4_16881819 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'messages' => 
   array (
-    0 => 'Block_6612588916134a8c2a65392_62988399',
+    0 => 'Block_214162950614b6c0b2999e4_16881819',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

@@ -9,7 +9,7 @@ $conf->app_root = '/ElectroWorld/public';   # project subfolder in domain (relat
 # ---- Database config - values required by Medoo
 $conf->db_type = 'mysql';
 $conf->db_server = 'localhost';
-$conf->db_name = 'ew';
+$conf->db_name = 'electro_world';
 $conf->db_user = 'root';
 $conf->db_pass = '';
 $conf->db_charset = 'utf8';

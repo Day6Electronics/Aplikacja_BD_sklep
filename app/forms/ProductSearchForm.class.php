@@ -2,7 +2,7 @@
 
 namespace app\forms;
 
-class productSearchForm {
+class ProductSearchForm {
 	public $query;
 }
 ?>

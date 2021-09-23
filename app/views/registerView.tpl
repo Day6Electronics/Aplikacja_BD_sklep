@@ -37,8 +37,8 @@
                 </div>
                 <div class="col-4 col-12-small">
                     <ul class="actions">
-                        <li><input value="Zarejestruj się" class="button primary" type="submit"></li>
-                        <li><a href="{$conf->action_root}loginShow" class="button">Powrót</a></li>
+                        <li><button class="button primary icon solid fa-user-plus" type="submit">Stwórz konto</button></li>
+                        <li><a href="{$conf->action_root}loginShow" class="button icon solid fa-reply">Powrót</a></li>
                     </ul>
                 </div>
                 <div class="col-4 col-12-small">
